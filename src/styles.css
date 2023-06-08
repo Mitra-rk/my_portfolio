@@ -1,16 +1,25 @@
-body {
+:root {
+  --bg-color: #f7efef;
+  --fg-color: #ff004f;
+}
+
+* {
   font-family: "Poppins", sans-serif;
 
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
+.activeMenu {
+  color: white;
+  background-color: var(--fg-color);
+  padding: 3px 8px;
+}
 header {
-  background-color: #f7efef;
+  background-color: var(--bg-color);
   max-width: 100%;
   height: 100vh;
-  padding: 0 10%;
+  padding: 0 5%;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -22,16 +31,32 @@ header nav {
   padding: 20px 0;
 }
 header nav h3 {
-  color: rgb(63, 81, 181);
+  color: black;
 }
 header nav ul li {
   list-style: none;
   display: inline-block;
-  margin: 10px 30px;
+  padding: 10px 10px;
+  margin: 15px;
 }
+
 header nav ul li a {
   text-decoration: none;
-  color: #3f51b5;
+  border: 1px solid var(--fg-color);
+  border-radius: 4px;
+  color: var(--fg-color);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 2px;
+  padding: 3px 8px;
+
+  transition: all 150ms ease-in-out;
+}
+header nav ul li :hover {
+  color: white;
+  background-color: var(--fg-color);
+
+  padding: 3px 8px;
 }
 
 .header-text {
@@ -45,33 +70,33 @@ header nav ul li a {
   flex-basis: 55%;
 }
 .dev-img {
-  flex-basis: 25%;
+  z-index: 1;
 }
 .dev-img img {
-  max-width: 100%;
-  border-radius: 200px;
+  width: 300px;
 }
 .header-text h1 {
   font-size: 50px;
   margin-top: 20px;
 }
 .header-text h1 span {
-  color: #ff004f;
+  color: var(--fg-color);
   letter-spacing: 2px;
   line-height: 1.5;
 }
 
-
-
 /* -------------services------------------ */
-.services{
-    margin-bottom: 0;
+.services {
+  margin-bottom: 0;
+}
+.services .title {
+  margin: 30px;
 }
 .services .title h2 {
   margin-left: 20px;
-  color: #ff004f;
+  color: var(--fg-color);
   opacity: 0.8;
-text-align: center;
+  text-align: center;
   font-size: 36px;
 }
 .projects {
@@ -80,10 +105,10 @@ text-align: center;
 }
 .projects div {
   padding: 5px;
-
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
   grid-gap: 10px;
   margin: 20px;
-  background-color:#f7efef;
+  background-color: var(--bg-color);
 
   border-radius: 5px;
 }
@@ -92,7 +117,7 @@ text-align: center;
 }
 /* -----------about---------- */
 .about {
-  padding: 40px 0;
+  padding: 40px 15%;
   max-width: 100%;
 }
 .about .row {
@@ -116,13 +141,13 @@ text-align: center;
 
 .about .row .col-2 {
   flex-basis: 70%;
-  background-color: #f7efef;
+  background-color: var(--bg-color);
   padding: 20px 15px;
 }
 h2 {
   line-height: 1.5;
   letter-spacing: 2px;
-  color: #ff004f;
+  color: var(--fg-color);
 }
 
 .about .row .col-2 p {
@@ -130,3 +155,8 @@ h2 {
   opacity: 0.6;
   line-height: 2;
 }
+.about .tabTitle {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
